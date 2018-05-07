@@ -10,5 +10,17 @@ var henkan = function(input){
 
 var getValue = function(idname){
   var result = document.getElementById(idname).value;
-  document.getElementById("str").innerText=henkan(result);
+  var said = henkan(result);
+  document.getElementById("str").innerText=said;
+  var button = '<a href="https://twitter.com/share" class="twitter-share-button" data-text="「' + said + '」" data-lang="ja" data-hashtags="カトシュ語変換機" data-url="https://sanraizuizumo.github.io/katoshu/">ツイート</a>';
+  $('#container').html(button);
+  twttr.widgets.load();
 }
+
+// twttr.widgets.createShareButton(
+//   'https://dev.twitter.com/',
+//   document.getElementById('container'),
+//   {
+//     text: 'Hello World'
+//   }
+// );
