@@ -12,7 +12,7 @@ var getValue = function(idname){
   var result = document.getElementById(idname).value;
   var said = henkan(result);
   document.getElementById("str").innerText=said;
-  var button = '<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="「' + said + '」" data-lang="ja" data-hashtags="カトシュ語変換機" data-url="https://sanraizuizumo.github.io/katoshu/">ツイート</a>';
+  var button = '<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="「' + said + '」" data-lang="ja" data-hashtags="カトシュ語変換機" data-url="https://sanraizuizumo.github.io/katoshu/" charset="UTF-8">ツイート</a>';
   $('#container').html(button);
   twttr.widgets.load();
 }
